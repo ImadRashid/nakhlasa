@@ -25,7 +25,7 @@ const Khidmatna = () => {
     },
   ];
   return (
-    <section className="px-[18px] md:px-[200px] 2xl:px-[327px] mb-20  ">
+    <section className="px-[18px] md:px-[170px] border  mb-20  ">
       <div className="flex justify-end">
         <div className="max-w-[343px] md:max-w-[373px] gap-4 md:gap-5 flex flex-col justify-end">
           <h2 className="text-[50px] md:text-[76px] font-[800]  text-end">

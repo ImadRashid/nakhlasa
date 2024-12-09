@@ -8,15 +8,15 @@ export const Header = () => {
         English
       </button>
       <div className="hidden md:flex text-[18px]  font-[400] gap-7 ">
-        <div> الاسئلة</div>
-        <div>خدماتنا </div>
-        <div>من نحن </div>
-        <div>الرئيسية </div>
+        <div className="cursor-pointer"> الاسئلة</div>
+        <div className="cursor-pointer">خدماتنا </div>
+        <div className="cursor-pointer">من نحن </div>
+        <div className="cursor-pointer">الرئيسية </div>
       </div>
       <div>
         <Image
-          className="w-[125px] md:w-[156px]"
-          src="/assets/images/logo.png"
+          className="w-[125px] md:w-[156px] cursor-pointer"
+          src="/assets/images/logo.svg"
           width={156}
           height={59}
           alt="logo"

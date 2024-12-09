@@ -4,25 +4,28 @@ import React from "react";
 const Hero = () => {
   const heroImgArray = [
     {
-      img: "/assets/images/hero1.png",
+      img: "/assets/images/hero1.svg",
     },
     {
-      img: "/assets/images/hero2.png",
+      img: "/assets/images/hero2.svg",
     },
     {
-      img: "/assets/images/hero3.png",
+      img: "/assets/images/hero3.svg",
     },
     {
-      img: "/assets/images/hero4.png",
+      img: "/assets/images/hero4.svg",
     },
     {
-      img: "/assets/images/hero5.png",
+      img: "/assets/images/hero5.svg",
     },
     {
-      img: "/assets/images/hero6.png",
+      img: "/assets/images/hero6.svg",
     },
     {
-      img: "/assets/images/hero7.png",
+      img: "/assets/images/hero7.svg",
+    },
+    {
+      img: "/assets/images/hero8.svg",
     },
   ];
 
