@@ -79,7 +79,7 @@ const Hero = () => {
         <div className="flex items-center gap-[20px] animate-marquee">
           <div className="flex items-center shrink-0 gap-4">
             <Image
-              src="/assets/images/halflogo.png"
+              src="/assets/images/halflogo.svg"
               width={54}
               height={54}
               alt="halglogoimg"
@@ -88,7 +88,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center shrink-0 gap-4">
             <Image
-              src="/assets/images/halflogo.png"
+              src="/assets/images/halflogo.svg"
               width={54}
               height={54}
               alt="halglogoimg"
@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center shrink-0 gap-4">
             <Image
-              src="/assets/images/halflogo.png"
+              src="/assets/images/halflogo.svg"
               width={54}
               height={54}
               alt="halglogoimg"
@@ -106,7 +106,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center shrink-0 gap-4">
             <Image
-              src="/assets/images/halflogo.png"
+              src="/assets/images/halflogo.svg"
               width={54}
               height={54}
               alt="halglogoimg"
@@ -115,7 +115,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center shrink-0 gap-4">
             <Image
-              src="/assets/images/halflogo.png"
+              src="/assets/images/halflogo.svg"
               width={54}
               height={54}
               alt="halglogoimg"
@@ -124,7 +124,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center shrink-0 gap-4">
             <Image
-              src="/assets/images/halflogo.png"
+              src="/assets/images/halflogo.svg"
               width={54}
               height={54}
               alt="halglogoimg"
@@ -133,7 +133,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center shrink-0 gap-4">
             <Image
-              src="/assets/images/halflogo.png"
+              src="/assets/images/halflogo.svg"
               width={54}
               height={54}
               alt="halglogoimg"
@@ -142,7 +142,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center shrink-0 gap-4">
             <Image
-              src="/assets/images/halflogo.png"
+              src="/assets/images/halflogo.svg"
               width={54}
               height={54}
               alt="halglogoimg"
@@ -155,7 +155,7 @@ const Hero = () => {
       {/* <div className='bg-[#2445CD] h-[140px] items-center flex gap-[30px] text-white overflow-hidden mb-[80px]'>
     {Array.from({ length: 5 }).map((_, index) => (
         <div key={index} className="flex items-center gap-[10px]">
-            <Image src='/assets/images/halflogo.png' width={54} height={54} alt='' />
+            <Image src='/assets/images/halflogo.svg' width={54} height={54} alt='' />
             <h3 className='text-[30px] font-semibold'>
                 {index % 2 === 0 ? 'تمويل' : 'شخصي'}
             </h3>
