@@ -53,14 +53,14 @@ const Hero = () => {
               );
             })}
           </div>
-          <button className="flex justify-center items-center w-[180px] h-[50px] md:w-[200px] md:h-[56px] font-semibold text-[20px]  bg-[#2445CD] text-white rounded-[50px]">
+          <button className="flex justify-center items-center w-[180px] h-[50px] md:w-[200px] md:h-[56px] font-semibold text-[20px]  bg-[#2445CD] text-white rounded-[50px] transition-all duration-300 ease-in-out hover:bg-[#1A3BAF] hover:scale-105 hover:shadow-lg">
             قدم طلبك الآن
           </button>
         </div>
 
         <Image
           className="hidden md:flex mt-[50px] md:mt-[57px] mb-[50px] md:mb-[80px]"
-          src="/assets/images/heroImg.png"
+          src="/assets/images/heroImg.svg"
           width={1040}
           height={780}
           alt="heroImg"
@@ -68,7 +68,7 @@ const Hero = () => {
 
         <Image
           className="flex md:hidden mt-[50px] md:mt-[57px] mb-[50px] px-[15px] "
-          src="/assets/images/heroImg2.png"
+          src="/assets/images/heroImg2.svg"
           width={1040}
           height={780}
           alt="heroImg"

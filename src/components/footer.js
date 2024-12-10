@@ -9,7 +9,7 @@ const Footer = () => {
           معاملات تمويل عقاري
           <br className="hidden md:flex" />، شخصي، سيارات
         </h3>
-        <button className="  flex justify-center items-center w-[180px] h-[56px] font-semibold text-[20px]  bg-[#2445CD] text-white rounded-[50px]">
+        <button className="  flex justify-center items-center w-[180px] h-[56px] font-semibold text-[20px]  bg-[#2445CD] text-white rounded-[50px] transition-all duration-300 ease-in-out hover:bg-[#1A3BAF] hover:scale-105 hover:shadow-lg">
           تواصل{" "}
         </button>
       </div>

@@ -4,28 +4,28 @@ import React from "react";
 const Khidmatna = () => {
   const servicesData = [
     {
-      img: "/assets/images/service1.png",
+      img: "/assets/images/service1.svg",
       heading: "تمويل عقاري",
       desc: "نوفر لك تمويلك، نحقق لك طموحك ! من خلال العمل مع مجموعة واسعة من الشركاء، قادرين على تزويد عملائنا بإمكانية الوصول إلى أفضل الخيارات الممكنة لتلبية احتياجاتهم المالية.",
       link: "اطلب تمويلك",
     },
 
     {
-      img: "/assets/images/service2.png",
+      img: "/assets/images/service2.svg",
       heading: "تمويل سيارات",
       desc: "نوفر لك تمويلك، نحقق لك طموحك ! من خلال العمل مع مجموعة واسعة من الشركاء، قادرين على تزويد عملائنا بإمكانية الوصول إلى أفضل الخيارات الممكنة لتلبية احتياجاتهم المالية",
       link: "اطلب تمويلك ",
     },
 
     {
-      img: "/assets/images/service3.png",
+      img: "/assets/images/service3.svg",
       heading: "تمويل شخصي ",
       desc: "ملتزمون بتوفير أفضل خيارات القروض الممكنة والمصممة خصيصًا لتلبية احتياجاتك. تضمن عمليتنا المبسطة السهولة والكفاءة، مما يوفر لك إمكانية الوصول السريع إلى الأموال التي تحتاجها",
       link: " اطلب تمويلك ",
     },
   ];
   return (
-    <section className="px-[18px] md:px-[170px] border  mb-20  ">
+    <section className="px-[18px] md:px-[170px] mb-20  ">
       <div className="flex justify-end">
         <div className="max-w-[343px] md:max-w-[373px] gap-4 md:gap-5 flex flex-col justify-end">
           <h2 className="text-[50px] md:text-[76px] font-[800]  text-end">
@@ -60,7 +60,7 @@ const Khidmatna = () => {
               <p className="text-[14px] md:text-[18px] text-end text-[#979797] font-semibold ">
                 {item.desc}
               </p>
-              <button className=" mt-7 flex justify-center items-center w-[142px] h-[34px] font-semibold text-[18px]  bg-[#2445CD] text-white rounded-[50px]">
+              <button className=" mt-7 flex justify-center items-center w-[142px] h-[34px] md:w-[180px] md:h-[56px] font-semibold text-[14px] md:text-[18px]  bg-[#2445CD] text-white rounded-[50px] transition-all duration-300 ease-in-out hover:bg-[#1A3BAF] hover:scale-105 hover:shadow-lg">
                 {item.link}{" "}
               </button>
             </div>
