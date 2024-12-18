@@ -33,7 +33,7 @@ const Hero = () => {
     <section>
       <div className="flex flex-col items-center justify-center">
         <div className="px-[15px] lg:min-w-[900px] mt-[42px] md:mt-[138px] font-bold flex flex-col items-center gap-[30px] md:gap-[25px] ">
-          <h1 className="text-[56px] md:text-[100px]  text-[#2445CD] md:text-[182px] md:text-[#000] font-bold">
+          <h1 className="text-[56px] md:text-[100px]  text-[#2445CD] lg:text-[182px] md:text-[#000] font-bold">
             منصة نخلصها
           </h1>
           <p className="text-[15px] sm:text-[17px] md:text-[25px] lg:text-[36px] text-[#979797] font-[800] ">
