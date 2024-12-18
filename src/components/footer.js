@@ -3,9 +3,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="mt-100 bg-[#2445CD] flex flex-col gap-[100px] pt-20 text-white px-[15px] md:px-40">
+    <footer className="mt-100 bg-[#2445CD] flex flex-col gap-[100px] pt-20 text-white px-[15px] lg:px-40">
       <div className="w-[100%] h-[246px] 2xl:h-[280px] rounded-[30px] bg-white flex flex-col justify-center items-end md:flex md:flex-row-reverse md:items-center md:justify-between px-16">
-        <h3 className="font-semibold text-[28px] md:text-[40px] text-black  my-5 text-end">
+        <h3 className="font-semibold text-[28px] md:text-[32px] lg:text-[40px] text-black  my-5 text-end">
           معاملات تمويل عقاري
           <br className="hidden md:flex" />، شخصي، سيارات
         </h3>

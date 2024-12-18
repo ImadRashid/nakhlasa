@@ -32,11 +32,11 @@ const Hero = () => {
   return (
     <section>
       <div className="flex flex-col items-center justify-center">
-        <div className="px-[15px] md:min-w-[900px] mt-[42px] md:mt-[138px] font-bold flex flex-col items-center gap-[30px] md:gap-[25px] ">
-          <h1 className="text-[56px]  text-[#2445CD] md:text-[182px] md:text-[#000] font-bold">
+        <div className="px-[15px] lg:min-w-[900px] mt-[42px] md:mt-[138px] font-bold flex flex-col items-center gap-[30px] md:gap-[25px] ">
+          <h1 className="text-[56px] md:text-[100px]  text-[#2445CD] md:text-[182px] md:text-[#000] font-bold">
             منصة نخلصها
           </h1>
-          <p className="text-[20px] md:text-[36px] text-[#979797] font-[800] ">
+          <p className="text-[15px] sm:text-[17px] md:text-[25px] lg:text-[36px] text-[#979797] font-[800] ">
             لمعاملات التمويل العقاري والشخصي والسيارات !
           </p>
           <div className="flex gap-[8px] md:gap-[20px]">
@@ -59,7 +59,7 @@ const Hero = () => {
         </div>
 
         <Image
-          className="hidden md:flex mt-[50px] md:mt-[57px] mb-[50px] md:mb-[80px]"
+          className="hidden md:flex md:px-10 lg:px-0 mt-[50px] md:mt-[57px] mb-[50px] md:mb-[80px]"
           src="/assets/images/heroImg.svg"
           width={1040}
           height={780}

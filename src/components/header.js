@@ -7,7 +7,7 @@ export const Header = () => {
       <button className="flex justify-center items-center w-[76px] h-[38px] md:w-[180px] md:h-[56px] font-semibold text-[14px] md:text-[20px]  bg-[#2445CD] text-white rounded-[50px] transition-all duration-300 linear hover:scale-105 ">
         English
       </button>
-      <div className="hidden md:flex text-[18px]  font-[400] gap-7 ">
+      <div className="hidden lg:flex text-[18px]  font-[400] gap-7 ">
         <div className="cursor-pointer"> الاسئلة</div>
         <div className="cursor-pointer">خدماتنا </div>
         <div className="cursor-pointer">من نحن </div>
