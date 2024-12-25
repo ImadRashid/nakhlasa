@@ -37,7 +37,7 @@ const Hero = () => {
             منصة نخلصها
           </h1>
           <p className="text-[15px] sm:text-[17px] md:text-[25px] lg:text-[36px] text-[#979797] font-[800] ">
-            لمعاملات التمويل العقاري والشخصي والسيارات !
+          !لمعاملات التمويل العقاري والشخصي والسيارات 
           </p>
           <div className="flex gap-[8px] md:gap-[20px]">
             {heroImgArray.map((item, ind) => {
@@ -151,7 +151,14 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
+      {/* <marquee >
+<div className="flex">
+<p>jawad</p>
+ <p>jawad</p>
+ <p>jawad</p>
+ <p>jawad</p>
+</div>
+</marquee> */}
       {/* <div className='bg-[#2445CD] h-[140px] items-center flex gap-[30px] text-white overflow-hidden mb-[80px]'>
     {Array.from({ length: 5 }).map((_, index) => (
         <div key={index} className="flex items-center gap-[10px]">
