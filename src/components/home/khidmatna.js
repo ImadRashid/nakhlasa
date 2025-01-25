@@ -7,13 +7,6 @@ const Khidmatna = () => {
   const [currentService, setCurrentService] = useState(null);
   const [formStep, setFormStep] = useState(1);
 
-  // const {
-  //   handleSubmit,
-  //   control,
-  //   reset,
-  //   formState: { errors },
-  // } = useForm();
-
   const {
     handleSubmit,
     control,
@@ -75,7 +68,7 @@ const Khidmatna = () => {
     "service3",
     "service4",
     "jawad",
-  ]); // Replace with actual field names
+  ]);
   const isNextButtonDisabled = watchedValues.some((value) => !value);
   return (
     <section className="px-[18px] md:px-[170px] mb-20">
@@ -158,14 +151,13 @@ const Khidmatna = () => {
                   </div>
                 </div>
 
-                {/* Step Labels */}
                 <div className="flex flex-row-reverse text-[#101827] text-[12px] font-[600] mt-[12px] gap-2">
                   <div className="grow flex justify-end">ادخل البيانات</div>
                   <div className="grow flex justify-end">الدفع</div>
                 </div>
               </>
             )}
-            {/* Form Steps */}
+
             <form onSubmit={handleSubmit(onSubmit)}>
               {formStep === 1 && (
                 <div className="mb-4 flex flex-col gap-2 mt-[20px] py-[28px] border-[1.5px] border-[#EAECEF] rounded-[8px] px-[17px]">
@@ -456,7 +448,13 @@ const Khidmatna = () => {
                     render={({ field }) => (
                       <div className="flex flex-col gap-3">
                         <label className="flex border-[#EAECEF] border rounded-[5px] px-2 py-3 items-center justify-between gap-2">
-                          <p>img</p>
+                          <Image
+                            className=" cursor-pointer"
+                            src="/assets/images/madi.png"
+                            width={45}
+                            height={19}
+                            alt="logo"
+                          />
                           <div className="flex gap-2 items-center">
                             <span className="text-[15px]">مدى</span>
                             <input
@@ -469,7 +467,13 @@ const Khidmatna = () => {
                           </div>
                         </label>
                         <label className="flex border-[#EAECEF] border rounded-[5px] px-2 py-3 items-center justify-between gap-2">
-                          <p>img</p>
+                          <Image
+                            className=""
+                            src="/assets/images/visa.png"
+                            width={45}
+                            height={19}
+                            alt="logo"
+                          />
                           <div className="flex items-center gap-2">
                             <span className="text-[15px]"> فيزا</span>
                             <input
@@ -482,7 +486,13 @@ const Khidmatna = () => {
                           </div>
                         </label>
                         <label className="flex border-[#EAECEF] border rounded-[5px] px-2 py-3 items-center justify-between gap-2">
-                          <p>img</p>
+                          <Image
+                            className="r"
+                            src="/assets/images/sidadpay.png"
+                            width={45}
+                            height={19}
+                            alt="logo"
+                          />
                           <div className="flex items-center gap-2">
                             <span className="text-[15px]">سداد </span>
                             <input
@@ -495,7 +505,13 @@ const Khidmatna = () => {
                           </div>
                         </label>
                         <label className="flex border-[#EAECEF] border rounded-[5px] px-2 py-3 items-center justify-between gap-2">
-                          <p>img</p>
+                          <Image
+                            className=""
+                            src="/assets/images/iphonepay.png"
+                            width={45}
+                            height={19}
+                            alt="logo"
+                          />
                           <div className="flex items-center gap-2">
                             <span className="text-[15px]"> أبل باي </span>
                             <input
@@ -536,7 +552,7 @@ const Khidmatna = () => {
                       عرض الفاتورة
                     </button>
                     <button
-                      nClick={closeModal}
+                      onClick={closeModal}
                       className="py-3 mt-2 text-white bg-[#2445CD] hover:bg-blue-700  rounded w-full rounded-full"
                     >
                       الرئيسية
