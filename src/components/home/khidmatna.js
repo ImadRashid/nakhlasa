@@ -64,8 +64,9 @@ const Khidmatna = () => {
   };
 
   const onSubmit = (data) => {
+    setFormStep((prevStep) => prevStep + 1);
     console.log("Form Data:", data);
-    closeModal();
+    // closeModal();
   };
   const watchedValues = watch([
     "service",
@@ -143,20 +144,27 @@ const Khidmatna = () => {
               </button>
             </div>
 
-            <div className="flex flex-row-reverse gap-2 mt-[42px] ">
-              <div className="grow bg-[#2445CD] rounded-full h-[7px]"></div>
-              <div className="grow bg-[#EDEDFC] flex justify-end rounded-full h-[7px]">
-                <div
-                  className={`${
-                    formStep > 1 ? "bg-[#FF5101]" : "bg-[#EDEDFC]"
-                  } w-[25%] h-full rounded-full`}
-                ></div>
-              </div>
-            </div>
-            <div className="flex flex-row-reverse text-[#101827] text-[12px] font-[600] mt-[12px] gap-2  ">
-              <div className="grow flex justify-end ">ادخل البيانات</div>
-              <div className="grow flex justify-end ">الدفع</div>
-            </div>
+            {formStep > 2 ? null : (
+              <>
+                {/* Progress Bar */}
+                <div className="flex flex-row-reverse gap-2 mt-[42px]">
+                  <div className="grow bg-[#2445CD] rounded-full h-[7px]"></div>
+                  <div className="grow bg-[#EDEDFC] flex justify-end rounded-full h-[7px]">
+                    <div
+                      className={`${
+                        formStep > 1 ? "bg-[#FF5101]" : "bg-[#EDEDFC]"
+                      } w-[25%] h-full rounded-full`}
+                    ></div>
+                  </div>
+                </div>
+
+                {/* Step Labels */}
+                <div className="flex flex-row-reverse text-[#101827] text-[12px] font-[600] mt-[12px] gap-2">
+                  <div className="grow flex justify-end">ادخل البيانات</div>
+                  <div className="grow flex justify-end">الدفع</div>
+                </div>
+              </>
+            )}
             {/* Form Steps */}
             <form onSubmit={handleSubmit(onSubmit)}>
               {formStep === 1 && (
@@ -200,7 +208,7 @@ const Khidmatna = () => {
                       )}
                     />
                     {errors.service && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-[15px] mt-1">
                         {errors.service.message}
                       </p>
                     )}
@@ -245,7 +253,7 @@ const Khidmatna = () => {
                       )}
                     />
                     {errors.service && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-[15px] mt-1">
                         {errors.service.message}
                       </p>
                     )}
@@ -290,7 +298,7 @@ const Khidmatna = () => {
                       )}
                     />
                     {errors.service && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-[15px] mt-1">
                         {errors.service.message}
                       </p>
                     )}
@@ -335,7 +343,7 @@ const Khidmatna = () => {
                       )}
                     />
                     {errors.service && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-[15px] mt-1">
                         {errors.service.message}
                       </p>
                     )}
@@ -380,7 +388,7 @@ const Khidmatna = () => {
                       )}
                     />
                     {errors.service && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-[15px] mt-1">
                         {errors.service.message}
                       </p>
                     )}
@@ -425,7 +433,7 @@ const Khidmatna = () => {
                       )}
                     />
                     {errors.service && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 text-[15px] mt-1">
                         {errors.service.message}
                       </p>
                     )}
@@ -434,26 +442,114 @@ const Khidmatna = () => {
               )}
 
               {formStep === 2 && (
-                <div className="mb-4">
-                  <p className="text-sm">Thank you for selecting a service!</p>
+                // <div className="my-5">
+                //   <p className="text-[15px]">Thank you for selecting a service!</p>
+                // </div>
+
+                <div className=" mt-8">
+                  <Controller
+                    name="paymentMethod"
+                    control={control}
+                    rules={{
+                      required: "براہ کرم ادائیگی کا ایک طریقہ منتخب کریں",
+                    }}
+                    render={({ field }) => (
+                      <div className="flex flex-col gap-3">
+                        <label className="flex border-[#EAECEF] border rounded-[5px] px-2 py-3 items-center justify-between gap-2">
+                          <p>img</p>
+                          <div className="flex gap-2 items-center">
+                            <span className="text-[15px]">مدى</span>
+                            <input
+                              {...field}
+                              type="radio"
+                              value="credit_card"
+                              checked={field.value === "credit_card"}
+                              className="form-radio"
+                            />
+                          </div>
+                        </label>
+                        <label className="flex border-[#EAECEF] border rounded-[5px] px-2 py-3 items-center justify-between gap-2">
+                          <p>img</p>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[15px]"> فيزا</span>
+                            <input
+                              {...field}
+                              type="radio"
+                              value="bank_transfer"
+                              checked={field.value === "bank_transfer"}
+                              className="form-radio"
+                            />
+                          </div>
+                        </label>
+                        <label className="flex border-[#EAECEF] border rounded-[5px] px-2 py-3 items-center justify-between gap-2">
+                          <p>img</p>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[15px]">سداد </span>
+                            <input
+                              {...field}
+                              type="radio"
+                              value="paypal"
+                              checked={field.value === "paypal"}
+                              className="form-radio"
+                            />
+                          </div>
+                        </label>
+                        <label className="flex border-[#EAECEF] border rounded-[5px] px-2 py-3 items-center justify-between gap-2">
+                          <p>img</p>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[15px]"> أبل باي </span>
+                            <input
+                              {...field}
+                              type="radio"
+                              value="cash_on_delivery"
+                              checked={field.value === "cash_on_delivery"}
+                              className="form-radio"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    )}
+                  />
+                  {errors.paymentMethod && (
+                    <p className="text-red-500 text-[15px] mt-1">
+                      {errors.paymentMethod.message}
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {formStep === 3 && (
+                <div className="">
+                  <div className="flex flex-col my-28 gap-4 items-center ">
+                    <h2 className="text-[#2445CD] text-[50px] font-[600]">
+                      تم الدفع
+                    </h2>
+                    <p className="text-center text-[#929497] text-[20px]">
+                      سوف يقوم فريق نخلصها بالتواصل معكم، شكراً{" "}
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <button
+                      onClick={closeModal}
+                      className="py-3 mt-2 text-white bg-[#2445CD] hover:bg-blue-700  rounded w-full rounded-full"
+                    >
+                      عرض الفاتورة
+                    </button>
+                    <button
+                      nClick={closeModal}
+                      className="py-3 mt-2 text-white bg-[#2445CD] hover:bg-blue-700  rounded w-full rounded-full"
+                    >
+                      الرئيسية
+                    </button>
+                  </div>
                 </div>
               )}
 
               <div className="flex justify-between mt-6">
-                {formStep > 1 && (
-                  <button
-                    type="button"
-                    onClick={handlePreviousStep}
-                    className="bg-gray-300 text-gray-800 py-2 px-4 rounded hover:bg-gray-400"
-                  >
-                    Previous
-                  </button>
-                )}
                 {formStep < 2 && (
                   <button
                     type="button"
                     onClick={handleNextStep}
-                    // className="bg-[#2445CD] text-white py-2 px-4 rounded hover:bg-[#1A3BAF]"
                     disabled={isNextButtonDisabled}
                     className={` py-3 mt-2 text-white rounded w-full rounded-full ${
                       isNextButtonDisabled
@@ -468,9 +564,9 @@ const Khidmatna = () => {
                 {formStep === 2 && (
                   <button
                     type="submit"
-                    className="bg-[#2445CD] text-white py-2 px-4 rounded hover:bg-[#1A3BAF]"
+                    className="py-3 mt-2 text-white bg-[#2445CD] hover:bg-blue-700 mt-24 rounded w-full rounded-full"
                   >
-                    Submit
+                    ادفع
                   </button>
                 )}
               </div>
